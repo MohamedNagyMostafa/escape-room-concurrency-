@@ -15,7 +15,7 @@ Room::Room(int&& x, int&& y, Place&& escape): _escape(escape)
 
 Room::~Room()
 {
-    delete[] _map;
+    free(_map);
 }
 
 Room::Room(const Room &source): _escape(source._escape), _size(source._size)
